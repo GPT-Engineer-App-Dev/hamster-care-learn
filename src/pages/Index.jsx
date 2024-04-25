@@ -1,9 +1,20 @@
 import { Box, Heading, Text, Grid, GridItem, Image, Container } from "@chakra-ui/react";
+import { keyframes } from '@emotion/react';
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 const Index = () => {
   return (
     <Container maxW="container.xl" centerContent>
       <Image src="/images/hamster-care.jpg" alt="Hamster Care" boxSize="400px" m="auto" mb={10} />
+      <Image src="/images/hamster-wheel.png" alt="Hamster in Wheel" boxSize="200px" m="auto" mb={10} css={{ animation: `${rotate} 10s linear infinite` }} />
       <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }} gap={6} p={5}>
         <GridItem colSpan={3}><Heading as="h1" size="2xl" textAlign="center">Hamster Skötsel</Heading></GridItem>
         
