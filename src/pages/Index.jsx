@@ -4,7 +4,7 @@ const Index = () => {
   return (
     <Container maxW="container.xl" centerContent>
       <Grid templateColumns="repeat(3, 1fr)" gap={6} p={5}>
-        <Heading as="h1" size="2xl" textAlign="center">Hamster Skötsel</Heading>
+        <GridItem colSpan={3}><Heading as="h1" size="2xl" textAlign="center">Hamster Skötsel</Heading></GridItem>
         <Image src="/images/hamster-care.jpg" alt="Hamster Care" boxSize="300px" m="auto" />
         <GridItem colSpan={1}><Box>
           <Heading as="h2" size="xl">Föda</Heading>
