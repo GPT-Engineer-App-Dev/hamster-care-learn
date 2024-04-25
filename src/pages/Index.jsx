@@ -1,15 +1,33 @@
-// Complete the Index page component here
-// Use chakra-ui
-import { Button } from "@chakra-ui/react"; // example
-import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
+import { Box, Heading, Text, VStack, Image } from "@chakra-ui/react";
 
 const Index = () => {
-  // TODO: Create the website here!
   return (
-    <Button>
-      Hello world! <FaPlus />
-    </Button>
-  ); // example
+    <VStack spacing={8} p={5}>
+      <Heading as="h1" size="2xl" textAlign="center">Hamster Skötsel</Heading>
+      <Image src="/images/hamster-care.jpg" alt="Hamster Care" boxSize="300px" m="auto" />
+      <Box>
+        <Heading as="h2" size="xl">Föda</Heading>
+        <Text>
+          Se till att din hamster får en balanserad kost bestående av hamsterfoder, frukt och grönsaker.
+          Undvik citrusfrukter och lök som kan vara skadliga för din hamster.
+        </Text>
+      </Box>
+      <Box>
+        <Heading as="h2" size="xl">Boende</Heading>
+        <Text>
+          Hamstrar behöver ett rymligt bur med tillräckligt med plats för att springa och leka.
+          Se till att inkludera ett löphjul och tunnlar för motion.
+        </Text>
+      </Box>
+      <Box>
+        <Heading as="h2" size="xl">Hälsosorg</Heading>
+        <Text>
+          Regelbunden veterinärkontroll är viktig för att upptäcka och behandla eventuella hälsoproblem tidigt.
+          Håll ett öga på tecken på sjukdom som slöhet eller förändringar i matvanor.
+        </Text>
+      </Box>
+    </VStack>
+  );
 };
 
 export default Index;
